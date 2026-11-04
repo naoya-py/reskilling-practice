@@ -4,8 +4,6 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from schedule_display import display_schedule
-
 
 def read_schedule() -> list[dict[str, Any]]:
     schedule_path = Path(__file__).with_name("schedule.json")
@@ -69,7 +67,9 @@ def main() -> int:
         print(f"予定の読み込みまたは日付の処理に失敗しました: {error}")
         return 1
 
-    display_schedule(target_date, events)
+    print(f"{target_date.isoformat()} の予定 {len(events)} 件")
+    for event in events:
+        print(format_event(event))
     return 0
 
 

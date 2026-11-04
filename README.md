@@ -4,19 +4,13 @@
 
 ## 実行方法
 
-初回のみ、Richをインストールします。
-
-```powershell
-py -m pip install -r requirements.txt
-```
-
 日付を指定する場合:
 
 ```powershell
 py schedule.py 2026-10-02
 ```
 
-日付を省略すると、日本時間の今日の予定をRichの表形式で表示します。出力の装飾は `schedule_display.py` の `display_schedule` 関数が担当します。
+日付を省略すると、日本時間の今日の予定を表示します。
 
 ```powershell
 py schedule.py

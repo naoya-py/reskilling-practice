@@ -10,7 +10,7 @@ def read_schedule() -> list[dict[str, Any]]:
     if not schedule_path.exists():
         alternate_paths = (
             Path(__file__).with_name("schedule.json.json"),
-            Path(__file__).parent / "data" / "schedule.json.json",
+            Path(__file__).parent / "data" / "schedule.json",
         )
         for alternate_path in alternate_paths:
             if alternate_path.exists():
